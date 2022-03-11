@@ -1,7 +1,58 @@
+/*
+  name="Dark Purple" hex="190b28" r="25" g="11" b="40"
+  name="Old Lavender" hex="685762" r="104" g="87" b="98"
+  name="Grullo" hex="9b9987" r="155" g="153" b="135"
+  name="Pastel Pink" hex="efa9ae" r="239" g="169" b="174"
+  name="Blush" hex="e55381" r="229" g="83" b="129"
+*/
+
 *::before,
 *::after {
     /* it's common to add this to every stylesheet; it forces
     a box element to include the content, borders and padding
     in its set width and height (margins are not included) */
     box-sizing: border-box;
+}
+body {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans;
+  color: #D1E3DD;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+header {
+  position: relative;
+}
+
+picture img {
+  max-height: 80vh;
+  object-fit: cover
+  object-position: right top;
+}
+header .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  box-shadow: inset 0 0 Okay 10vw 5 vw rgba(0,0,0,.6);
+  line-height:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1 {
+  color: #C2CFB2;
+  font-size: clamp(3rem,6vw,6rem);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #685762;
+}
+
+header p {
+  color: #
 }
