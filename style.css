@@ -12,7 +12,7 @@
 
   --background-color: #F6C5AF;
   --text-color: #333;
-  --heading-font: 'Verdana';
+  --heading-font: "Verdana";
 }
 *::before,
 *::after {
@@ -43,7 +43,7 @@ header {
 
 picture img {
   max-height: 80vh;
-  object-fit: cover
+  object-fit: cover;
   object-position: right top;
 }
 header .overlay {
@@ -89,7 +89,7 @@ nav list a {
   font-size: 2rem;
   margin: 1rem;
   padding: 1rem 1rem;
-  text-decoration: upercase;
+  text-decoration: uppercase;
   border-bottom: 3px solid transparent;
 }
 
