@@ -1,11 +1,19 @@
-/*
-  name="Dark Purple" hex="190b28" r="25" g="11" b="40"
-  name="Old Lavender" hex="685762" r="104" g="87" b="98"
-  name="Grullo" hex="9b9987" r="155" g="153" b="135"
-  name="Pastel Pink" hex="efa9ae" r="239" g="169" b="174"
-  name="Blush" hex="e55381" r="229" g="83" b="129"
-*/
 
+: root {
+  --main-highlite-color: ##2D3047;
+
+  --second-highlite-color: #a63d40;
+
+  --contrast-color-dark: #C2CFB2#;
+  --contrast-color-dark-lighter: #7B8377;
+
+  --contrast-color-light: #;
+  --contrast-color-light-darker: #;
+
+  --background-color: #F6C5AF;
+  --text-color: #333;
+  --heading-font: 'coda';
+}
 *::before,
 *::after {
     /* it's common to add this to every stylesheet; it forces
@@ -15,6 +23,13 @@
 }
 body {
   font-family:"Coda";
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 2;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 img {
