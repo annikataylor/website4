@@ -16,9 +16,6 @@
 }
 *::before,
 *::after {
-    /* it's common to add this to every stylesheet; it forces
-    a box element to include the content, borders and padding
-    in its set width and height (margins are not included) */
     box-sizing: border-box;
 }
 body {
@@ -97,7 +94,21 @@ nav li a[href]:hover {
   border-bottom: 3px solid var(--second-highlite-color);
 }
 
+img {
+  width: 100%;
+  display: block;
+}
 h1, h2, h3 {
   font-family: var(--heading-font);
   line-height: 1mm;
+}
+
+h2 {
+  font-size: 2rem;
+   color: var(--second-highlite-color);
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
 }
