@@ -96,3 +96,8 @@ nav list a {
 nav li a[href]:hover {
   border-bottom: 3px solid var(--second-highlite-color);
 }
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  line-height: 1mm;
+}
