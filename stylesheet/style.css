@@ -112,3 +112,17 @@ a {
   cursor: pointer;
   display: inline-block;
 }
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.article .txt-wrap {
+  order: -1;
+  margin-bottom: 2rem;
+}
+
+.article h2 {
+  margin-top: 0;
+}
