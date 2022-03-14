@@ -113,16 +113,46 @@ a {
   display: inline-block;
 }
 
-.article {
+.intro {
   display: flex;
   flex-direction: column;
 }
 
-.article .txt-wrap {
+.intro .txt-wrap {
   order: -1;
   margin-bottom: 2rem;
 }
 
-.article h2 {
+.intro h2 {
   margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  article {
+    margin: 10rem 0;
+  }
+  aside {
+    font-size: 3rem;
+  }
+  .intro {
+    flex-direction: row;
+  }
+  .intro .img-wrap {
+    order: 0;
+    margin-bottom: 0;
+    flex: 1 1 50%;
+  }
+  .intro .txt-wrap {
+    flex: 1 1 50%;
+  }
+  .intro .left {
+    order: -1;
+    margin-right: 2rem;
+  }
+  .intro h2 {
+    margin-top: 0;
+  }
+  .intro img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
