@@ -83,7 +83,7 @@ nav ul {
   justify-content: center;
 }
 
-nav list a {
+nav li a {
   display: block;
   color: var(--text-color);
   font-size: 2rem;
