@@ -1,10 +1,10 @@
 
 : root {
-  --main-highlite-color: ##2D3047;
+  --main-highlite-color: #2D3047;
 
   --second-highlite-color: #a63d40;
 
-  --contrast-color-dark: #C2CFB2#;
+  --contrast-color-dark: #C2CFB2;
   --contrast-color-dark-lighter: #7B8377;
 
   --contrast-color-light: #;
