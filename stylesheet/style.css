@@ -36,6 +36,11 @@ img {
   display: block;
 }
 
+.svg {
+  width: 200px;
+
+}
+
 header {
   position: relative;
 }
@@ -127,6 +132,8 @@ a {
 .intro h2 {
   margin-top: 0;
 }
+
+
 @media screen and (min-width: 768px) {
   article {
     margin: 10rem 0;
