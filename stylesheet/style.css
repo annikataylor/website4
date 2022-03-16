@@ -12,7 +12,7 @@
 
   --background-color: #F6C5AF;
   --text-color: #333;
-  --heading-font: "Verdana";
+  --heading-font: 'Rubik', sans-serif;
 }
 *,
 *::before,
