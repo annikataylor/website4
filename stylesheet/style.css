@@ -1,18 +1,18 @@
 
 :root {
-  --main-highlite-color: #2D3047;
-
+  --main-highlite-color: #A06D6A;
   --second-highlite-color: #a63d40;
 
-  --contrast-color-dark: #C2CFB2;
-  --contrast-color-dark-lighter: #7B8377;
+  --contrast-color-dark: #7B8377;
+  --contrast-color-light: #EFF2F1;
 
-  --contrast-color-light: #;
-  --contrast-color-light-darker: #;
-
-  --background-color: #F6C5AF;
+  --background-color: #C2CFB2;
   --text-color: #333;
-  --heading-font: 'Rubik', sans-serif;
+
+  --main-font: 'Rubik', sans-serif;
+
+  --duration: 700ms;
+  --timing-function: cubic-bezier(0.2, 1, .22, 1);
 }
 *,
 *::before,
@@ -20,6 +20,11 @@
     box-sizing: border-box;
 }
 
+main {
+  padding: 0 1rem;
+  align-self: center;
+  max-width: 70rem;
+}
 body {
   font-family: 'Rubik', sans-serif;
   color: var(--text-color);
@@ -28,7 +33,7 @@ body {
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 img {
@@ -38,7 +43,6 @@ img {
 
 .svg {
   width: 200px;
-
 }
 
 header {
@@ -94,6 +98,7 @@ nav li a {
   padding: 1rem 1.8rem;
   text-decoration: none;
   border-bottom: 3px solid transparent;
+  transition: border-bottom 300ms ease-out;
 }
 
 nav li a[href]:hover {
@@ -105,8 +110,8 @@ img {
   display: block;
 }
 h1, h2, h3 {
-  font-family: var(--heading-font);
-  line-height: 1mm;
+  font-family: var(--main-font);
+  line-height: 1;
 }
 
 h2 {
@@ -119,48 +124,248 @@ a {
   display: inline-block;
 }
 
-.intro {
+.btn {
+  border: 1px solid var(--second-highlite-color);
+  color: var(--second-highlite-color);
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: background-color 300ms linear;
+}
+
+.btn:hover {
+  background-color: var(--second-highlite-color);
+  color: var(--background-color);
+}
+
+.panel {
   display: flex;
   flex-direction: column;
 }
 
-.intro .txt-wrap {
+.panel .txt-wrap {
   order: -1;
   margin-bottom: 2rem;
 }
 
-.intro h2 {
+.panel h2 {
   margin-top: 0;
 }
 
+.cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+  max-width: 1600px;
+  font-family: var(--main-font);
+}
 
-@media screen and (min-width: 768px) {
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color:
+  background-color: var(--main-highlite-color);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5), 0 2px 2px rgba(0,0,0,0.5), 0 4px 4px rgba(0,0,0,0.5), 0px 16px 16px rgba(0,0,0,0.5);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: center center;
+  transition: transform calc(var--duration) * 1.5)var(--timing-function);
+  pointer-events: none;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 50%,
+    rgba(0,0,0,0) 75%,
+    rgba(0,0,0,0) 100%;
+);
+    transform: translateY(-50%);
+    transform: transform calc(var(--duration)* 2 var(--timing-function));
+}
+
+.card:nth-child(1)::before {
+  background-image: url();
+}
+.card:nth-child(2)::before {
+  background-image: url();
+}
+.card:nth-child(3)::before {
+  background-image: url();
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--duration) var(--timing-function);
+  z-index: 1;
+  user-select: none;
+}
+
+.content > * * * {
+  margin-top: 1rem;
+}
+
+.cards h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.cards p {
+  font-family: var(--main-font);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.card a {
+  display: block;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: .75rem 1.5rem;
+  font-size: .65rem;
+  font-weight: bold;
+  letter-spacing: .025rem;
+  text-transform: uppercase;
+  color: #333;
+  background-color: var(--)
+  text-decoration: none;
+}
+
+.card a:hover {
+  background-color: ;
+}
+
+.card a:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 750px) {
   article {
     margin: 10rem 0;
   }
   aside {
     font-size: 3rem;
   }
-  .intro {
+  .panel {
     flex-direction: row;
   }
-  .intro .img-wrap {
+  .panel .img-wrap {
     order: 0;
     margin-bottom: 0;
     flex: 1 1 50%;
   }
-  .intro .txt-wrap {
+  .panel .txt-wrap {
     flex: 1 1 50%;
   }
-  .intro .left {
+  .panel .left {
     order: -1;
     margin-right: 2rem;
   }
-  .intro h2 {
+  .panel h2 {
     margin-top: 0;
   }
-  .intro img {
+  .panel img {
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 45%;
+    height: 350px;
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+
+  .content > *:not(h2) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function);
+  }
+
+  .card:hover,
+  .card:focus-within {
+    align-item: center;
+  }
+
+  .card:hover:before,
+  .card:focus-within:before {
+    transform: translateY(-4%);
+  }
+
+  .card:hover .content,
+  .card:focus-within .content {
+    transform: translateY(0);
+  }
+
+  .card:hover .content > *:not(h2),
+  .card:focus-within .content > *:not(h2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--duration) / 8);
+  }
+
+  .card:focus-within:before,
+  .card:focus-within:after,
+  .card:focus-within .content,
+  .card:focus-within .content > *:not(h2) {
+    transition-duration: 0s;
   }
 }
