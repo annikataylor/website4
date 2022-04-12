@@ -33,6 +33,7 @@ body {
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
+  margin: 0 1rem;
   /*overflow-x: hidden;*/
 }
 
@@ -153,6 +154,7 @@ a {
   margin-top: 0;
 }
 
+  /* CARDS */
 .cards {
   align-items: center;
   display: flex;
@@ -210,13 +212,13 @@ a {
 }
 
 .card:nth-child(1)::before {
-  background-image: url();
+  background-image: "";
 }
 .card:nth-child(2)::before {
-  background-image: url();
+  background-image: "images/card2.jpg";
 }
 .card:nth-child(3)::before {
-  background-image: url();
+  background-image: url("https://www.espn.com");
 }
 
 .content {
@@ -348,6 +350,10 @@ a {
   .card:hover:before,
   .card:focus-within:before {
     transform: translateY(-4%);
+}
+  .card:hover:after,
+  .card:focus:focus-within:after {
+    transform:translateY(-50%);
   }
 
   .card:hover .content,
